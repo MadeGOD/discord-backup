@@ -80,7 +80,7 @@ export const loadRoles = (guild: Guild, backupData: BackupData): Promise<Role[]>
 export const loadChannels = (guild: Guild, backupData: BackupData, options: LoadOptions): Promise<unknown[]> => {
     const loadChannelPromises: Promise<void | unknown>[] = [];
     backupData.channels.categories.forEach((categoryData) => {
-        loadChannelPromises.push(
+        await loadChannelPromises.push(
             new Promise((resolve) => {
                 loadCategory(categoryData, guild).then((createdCategory) => {
                     categoryData.children.forEach((channelData) => {
