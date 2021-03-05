@@ -1,5 +1,5 @@
 {
-  "name": "discord-backup",
+  "name": "diko-backup",
   "version": "2.4.1",
   "description": "A complete framework to facilitate server backup using discord.js v12",
   "main": "lib/index.js",
